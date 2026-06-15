@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/rooms.schema.json",
+  "title": "Rooms",
+  "description": "Placeholder schema for Citadel room data. This schema is intentionally minimal and should evolve with the room model.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name"],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "context": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "connections": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}
